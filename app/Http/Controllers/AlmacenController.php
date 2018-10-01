@@ -38,4 +38,9 @@ class AlmacenController extends Controller
         TcAlmacen::findOrFail($id)->delete();
         return response('Deleted Successfully', 200);
     }
+    public function showAllCongeladores($id)
+    {
+        return response()->json(TcAlmacen::find($id)->Congeladores);
+    }
+    
 }

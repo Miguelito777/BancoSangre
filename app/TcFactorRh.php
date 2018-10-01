@@ -15,7 +15,7 @@ class TcFactorRh extends Model
     protected $fillable = [
         'factor_rh'
     ];
-    protected $table = "tc_factor_rh_";
+    protected $table = "tc_factor_rh";
     /**
      * The attributes excluded from the model's JSON form.
      *

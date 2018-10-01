@@ -16,6 +16,10 @@ class TcAlmacen extends Model
         'nombre'
     ];
     protected $table = "tc_almacen";
+
+    public function Congeladores(){
+        return $this->hasMany('App\TcCongelador', 'tc_almacen_id_almacen', 'id');
+    }
     /**
      * The attributes excluded from the model's JSON form.
      *

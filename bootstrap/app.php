@@ -7,7 +7,6 @@ try {
 } catch (Dotenv\Exception\InvalidPathException $e) {
     //
 }
-
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -47,8 +46,13 @@ $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
     App\Console\Kernel::class
 );
+$app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
 
-/*
+$app->middleware([
+    App\Http\Middleware\CorsMiddleware::class
+ ]);
+
+ /*
 |--------------------------------------------------------------------------
 | Register Middleware
 |--------------------------------------------------------------------------
